@@ -147,7 +147,7 @@ def main
       system("#{texcommand} -kanji=#{kanji} book.tex")
     end
     if File.exist?("book.dvi")
-      system("dvipdfmx -d 5 book.dvi")
+      system("dvipdfmx -f ~/.review/ptex.map -f ~/.review/otf.map -d 5 book.dvi")
     end
   }
   FileUtils.cp("#{@path}/book.pdf", "#{@basedir}/#{bookname}.pdf")
