@@ -193,6 +193,16 @@ module ReVIEW
       puts '\item ' + str
     end
 
+    def newpage
+      puts '\newpage'
+      blank
+    end
+
+    def newline
+      puts '\newline'
+      blank
+    end
+
     def ol_end
       puts '\end{enumerate}'
       blank
@@ -568,7 +578,7 @@ module ReVIEW
     end
 
     def pagebreak
-      puts '\pagebreak'
+      print '\pagebreak'
     end
 
     def linebreak
